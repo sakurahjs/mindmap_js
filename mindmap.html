@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            canvas { border: 1px solid slateblue; }
+        </style>
+        <script src="./mindmap/NodeBackgroundRenderer.js"></script>
+        <script src="./mindmap/Renderer.js"></script>
+        <script src="./mindmap/NodeConnectionPointsCalculator.js"></script>
+        <script src="./mindmap/MindNode.js"></script>
+        <script src="./mindmap/MouseListener.js"></script>
+        <script src="./mindmap/MindmapService.js"></script>
+        <script src="./mindmap/MindmapController.js"></script>
+        <script src="./mindmap/mindmap.js"></script>
+        <script>
+            
+
+        </script>
+    </head>
+    <body>
+        <p>https://farm4.staticflickr.com/3783/12088192743_d4c06303a4_h.jpg</p>
+        <p>https://farm4.staticflickr.com/3821/11530170973_4b491cfdaf_h.jpg</p>
+        <p>https://farm5.staticflickr.com/4072/4708304735_81c2547dbe_b.jpg</p>
+        
+
+        
+        <div>
+            <button onclick="newNode()">New</button>
+        </div>
+        <div>
+            <input type="text" id="text">
+            <button onclick="text()">Text</button>
+        </div>
+        <div>
+            <button onclick="deleteNode()">Delete</button>
+        </div>
+        <div>
+            <button onclick="clearFrom()">Clear Link</button>
+        </div>
+        <div>
+            <button onclick="linking()">Link</button>
+        </div>
+        <div>
+                <select id="shape" onchange="changeShape()">
+                    <option value="rectangle">rectangle</option>
+                    <option value="diamond">diamond</option>
+                    <option value="circle">circle</option>
+                </select>
+                <select id="target">
+                    <option value="background">background</option>
+                    <option value="fontColor">fontColor</option>
+                    <option value="lineColor">lineColor</option>
+                    <option value="strokeColor">strokeColor</option>
+                </select>
+                <select id="color" onchange="colorChange()">
+                    <option value="black">black</option>
+                    <option value="yellow">yellow</option>
+                    <option value="red">red</option>
+                    <option value="pink">pink</option>
+                    <option value="green">green</option>
+                    <option value="blue">blue</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" id="imageUrl" />
+                <button onclick="setImage()">Image</button>
+                <button onclick="clearImage()">Clear Image</button>
+            </div>
+            <div>
+                <button onclick="biggerWidth()">Bigger width</button>
+                <button onclick="smallerWidth()">Smaller width</button>
+                <button onclick="biggerHeight()">Bigger height</button>
+                <button onclick="smallerHeight()">Smaller height</button>
+            </div>
+            <div>
+                <button onclick="toImage()">To image</button>
+                <img id="image"/ crossorigin="anonymous">
+            </div>
+        <canvas id="canvas" width="500" height="400"></canvas>
+    </body>
+</html>
